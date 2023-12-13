@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polynomial Curve Generator</title>
+</head>
+<body>
+    <h1>Polynomial Curve Generator</h1>
+
+    <form method="post" action="/">
+        <label for="x">X values:</label>
+        <input type="text" name="x_1" placeholder="X1">
+        <input type="text" name="y_1" placeholder="Y1"><br>
+        <input type="text" name="x_2" placeholder="X2">
+        <input type="text" name="y_2" placeholder="Y2"><br>
+        <!-- Add more input fields as needed -->
+
+        <button type="submit">Generate Curve</button>
+    </form>
+
+    {% if result %}
+        <h2>Polynomial Formula:</h2>
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
